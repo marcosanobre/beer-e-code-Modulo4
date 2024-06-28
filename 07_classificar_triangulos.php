@@ -14,5 +14,11 @@ $lado2 = $argv[2];
 $lado3 = $argv[3];
 
 if ($lado1 == $lado2 && $lado1 == $lado3) {
-    $triangulo = 'Equilatero';
-} else if ($lado1 == $lado2 || $lado1 == $lado3) {
+    $triangulo = 'Equilátero';
+} else if ($lado1 == $lado2 || $lado1 == $lado3 || $lado2 == $lado3) {
+    $triangulo = 'Isóceles';
+} else if ($lado1 != $lado2 && $lado2 != $lado3 && $lado3 != $lado1) {
+    $triangulo = 'Escaleno';
+};
+
+echo "\n\nDada as medidas: Lado-1 {$lado1}, Lado-2 {$lado3}, Lado-3 {$lado3}, o Triangulo é considerado: {$triangulo}.\n\n";
